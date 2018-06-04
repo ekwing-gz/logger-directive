@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <div v-log:click="handleClick">点我点我</div>
-    <input v-log:blur="handleBlur">
+    <div v-log:click="clickLogMsg">点我点我</div>
+    <input v-log:blur="blurLogMsg">
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    handleClick () {
-      alert('You click me!')
-    },
-    handleBlur () {
-      alert('你离开我了!')
+  data () {
+    return {
+      clickLogMsg: 'You click me!',
+      blurLogMsg: '你离开我了！'
     }
   }
 }

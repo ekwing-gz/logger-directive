@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from './App'
-import logger from './logger'
+import createLogger from './createLogger'
+
+let logger = createLogger(function (payload) {
+  alert(payload)
+})
 
 Vue.use(logger)
 

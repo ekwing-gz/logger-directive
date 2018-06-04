@@ -1,13 +1,17 @@
-# Vue日志指令
+# Vue日志指令生成器
 
-> 触发指定事件，调用payload回调
+> 触发指定事件，调用绑定的回调处理函数
 
 ## Usage
 
 ```
 // main.js
 import Vue from 'vue'
-import logger from 'logger'
+import createLogger from 'createLogger'
+
+let logger = createLogger(function (payload) {
+  // do something with payload
+})
 
 Vue.use(logger)
 
